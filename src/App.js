@@ -36,6 +36,17 @@ function App() {
     setCards(cards_copy);
   }
 
+  // Pass the new name from the input to chnge to the new name
+const changeNameHandler = (event, id) => {
+  // 1. Which Card - Find the card
+  const cardIndex = cards.findIndex(card => card.id == id);
+  //2. Make a copy of the card
+  const card_copy = [...cards];
+  //3. Change the name of the specific card
+  card_copy[cardIndex].name = event.target.value;
+  //4. Set the cards array object to th enew updated copy
+  setCards(card_copy);
+}
   // Cleaner way of conditional rendering by using a variable in the Javascript area
   const cardsMarkup = showCard && 
     cards.map((card, cardIndex) =>
@@ -45,6 +56,7 @@ function App() {
         name={card.name}
         title={card.title}
         onDelete={() => deleteHandler(cardIndex)}
+        onChangeName={(event,id) => changeNameHandler(event,card.id)}
       />
   );
   return (
