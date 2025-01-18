@@ -15,8 +15,8 @@
   margin: 4px 2px;
   cursor: pointer;
 }
-.button2 {background-color: #008CBA;} /* Blue */
-.button3 {background-color: #f44336;} /* Red */ 
+.button-blue {background-color: #008CBA;} /* Blue */
+.button-red {background-color: #f44336;} /* Red */ 
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
