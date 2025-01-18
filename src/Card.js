@@ -8,7 +8,7 @@ const Card = (props) => {
         <div className="container">
           <h4><b>{props.name}</b></h4>
           <p>{props.title}</p>
-          <button className='button button-red'>Delete Card</button>
+          <button className='button button-red' onClick={props.onDelete}>Delete Card</button>
         <div>{props.children}</div>
         </div>
       </div>
